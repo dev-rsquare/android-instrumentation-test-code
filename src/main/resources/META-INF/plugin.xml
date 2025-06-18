@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>org.jetbrains.plugins.template.AndroidInstrumentationTestGenerator</id>
+    <id>org.jetbrains.plugins.template.AndroidTestGenerator</id>
     <name>Android Instrumentation Test Generator</name>
     <version>0.0.1</version>
     <vendor email="vkwofm@gmail.com">carter</vendor>
@@ -8,6 +8,12 @@
     <!-- IntelliJ IDEA 및 Android Studio에서 모두 호환되도록 설정 -->
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.androidstudio</depends>
+
+    <actions>
+        <action id="AndroidUnitTestGenerator" class="org.jetbrains.plugins.template.AndroidUnitTestGenerator" text="Android Unit Test Generator">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
 
     <actions>
         <action id="AndroidInstrumentationTestGenerator" class="org.jetbrains.plugins.template.AndroidInstrumentationTestGenerator" text="Android Instrumentation Test Generator">
